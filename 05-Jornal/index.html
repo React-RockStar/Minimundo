@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="nav-no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>MINI MUNDO</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/defaults.css">
+    <link rel="stylesheet" href="css/nav-core.css">
+    <link rel="stylesheet" href="css/nav-layout.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/jornal.css">
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/rem.min.js"></script>
+    <script src="js/custom.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+</head>
+<body>
+    <div>  
+        <header id="header_menu">
+            <img src="images/logo.png" alt="" class="header_logo" id="header_logo">
+        </header>
+        <a href="#" class="nav-button" onclick="showMenu()"></a>
+        <nav class="nav mobile_navmenu">
+            <ul>
+                <li>
+                    <img src="images/logo.png" alt="" class="nav_logo">
+                    <img src="images/nav_logo.png" alt="" class="mobile_nav_logo">
+                </li>
+                <li class="nav-submenu triangle triangle_no1 menu_item"><a href="#" onclick="upangle1()">O Parque</a>
+                    <ul class="submenu1">
+                        <li><a href="#">História</a></li>
+                        <li><a href="#">Linha do tempo</a></li>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Mapa</a></li>
+                        <li><a href="#">Lojas</a></li>
+                        <li><a href="#">Oficina</a></li>
+                    </ul>
+                </li>
+                <li class="nav-submenu triangle triangle_no2 menu_item"><a href="#" onclick="upangle2()">Galeria</a>
+                    <ul class="submenu2">
+                        <li><a href="#">Fotos do Parque</a></li>
+                        <li><a href="#">Vídeos</a></li>
+                        <li><a href="#">Personagens</a></li>
+                    </ul>
+                </li>
+                <li class="nav-submenu triangle triangle_no3 menu_item"><a href="#" onclick="upangle3()">Diversão</a>
+                    <ul class="submenu3">
+                        <li><a href="#">Baixe o App</a></li>
+                        <li><a href="#">Livros</a></li>
+                        <li><a href="#">Desenhos</a></li>
+                        <li><a href="#">Gibi</a></li>
+                    </ul>
+                </li>
+                <li class="nav-submenu triangle triangle_no4 menu_item"><a href="#" onclick="upangle4()">Curiosidades</a>
+                    <ul class="submenu4">
+                        <li><a href="#">Você Sabia?</a></li>
+                        <li><a href="#">Detalhes</a></li>
+                        <li><a href="#">Eventos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-submenu triangle triangle_no5 menu_item"><a href="#" onclick="upangle5()">Notícias</a>
+                    <ul class="submenu5">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Últimas notícias</a></li>
+                        <li><a href="#">Mini-habitantes</a></li>
+                        <li><a href="#">Nosso jornal</a></li>
+                    </ul>
+                </li>
+                <li class="nav-submenu triangle triangle_no5 contato_item" style="display: none;"><a href="#">CONTATO</a>
+                </li>
+                <li class="desktop_cart">
+                    <p class="nav_cart"  onmouseenter="highlight_cart(this)" onmouseleave="unhighlight_cart(this)">
+                        <img src="images/cart.png" alt="" id="cart">
+                        MIUDINHOS
+                    </p>
+                </li>
+                <li class="mobile_cart" style="display: none;">
+                    <p class="nav_cart"  onmouseenter="highlight_cart(this)" onmouseleave="unhighlight_cart(this)">
+                        <img src="images/cart.png" alt="" id="cart">
+                        MIUDINHOS
+                    </p>
+                </li>  
+                <li class="desktop_ticket">
+                    <p class="nav_ticket" onmouseover="highlight_ticket(this)" onmouseleave="unhighlight_ticket(this)">
+                        <img src="images/ticket.png" alt="" id="ticket">
+                        INGRESSOS
+                    </p>
+                </li>
+                <li class="mobile_ticket" style="display: none;">
+                    <p class="nav_ticket" onmouseover="highlight_mobile(this)" onmouseleave="unhighlight_mobile(this)">
+                        <img src="images/red_ticket.png" alt="" id="mobile_ticket">
+                        INGRESSOS
+                    </p>
+                </li>
+            </ul>
+            <i class="fa fa-close" style="display: none;"></i>
+        </nav>
+        <a href="#" class="nav-close">Close Menu</a>
+    </div>
+<div class="jornal_content">
+    <div class="content_logo">
+        <img src="images/tower_icon.png" alt="" class="content_tower">
+        <p>Banca</p>
+    </div>
+    <p class="content_title">Jornal do Mini Mundo</p>
+    <div class="jornal_desktop_gallery">
+        <div class="jornal_img_top">
+            <img src="05-images/jornal01.jpg" alt="" id="img_jornal_top">
+        </div>
+        <div class="jornal_img_bottom">
+            <img src="05-images/jornal02.jpg" alt="" onclick="display(this)">
+            <img src="05-images/jornal03.jpg" alt="" onclick="display(this)">
+            <img src="05-images/jornal04.jpg" alt="" onclick="display(this)">
+        </div>
+    </div>
+    <div class="jornal_mobile_gallery">
+        <div class="owl-carousel owl-theme">
+            <div class="item" >
+                <img src="05-images/jornal02.jpg" alt="" class="jornal_mobile_img"  onclick="display(this)">
+            </div>
+            <div class="item" >
+                <img src="05-images/jornal03.jpg" alt="" class="jornal_mobile_img"  onclick="display(this)">
+            </div>
+            <div class="item">
+                <img src="05-images/jornal04.jpg" alt="" class="jornal_mobile_img"  onclick="display(this)">
+            </div>
+        </div>
+    </div> 
+    <p class="blog_footer_btn">Ver mais edições</p>   
+</div>
+<div id="full_content">
+    <div class="emailbox">
+        <p>
+            Cadastre-se para saber <br>das novidades!
+        </p>
+        <form action="#">
+            <div>
+                <input type="email" placeholder="Preencha seu email aqui.">
+            </div>
+            <div class="emailbox_btn">
+                Enviar
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="desktop_footer">
+            <div class="footer_part1">
+                <p></p>
+                <img src="images/brand.png" alt="">
+                <p></p>
+            </div>
+            <div class="footer_part2">
+                <div class="width-8">
+
+                </div>
+                <div  class="part2_first">
+                    <div class="first_list">
+                        <ul class="first_one">
+                            <li><a href="#">O Parque</a></li>
+                            <li><a href="#" class="footer_link">História</a></li>
+                            <li><a href="#" class="footer_link">Linha do Tempo</a></li>
+                            <li><a href="#" class="footer_link">Quem Somos</a></li>
+                            <li><a href="#" class="footer_link">Mapa</a></li>
+                            <li><a href="#" class="footer_link">Lojas</a></li>
+                            <li><a href="#" class="footer_link">Oficina</a></li>
+                        </ul>
+                        <ul class="first_two">
+                            <li><a href="#">Galeria</a></li>
+                            <li><a href="#" class="footer_link">Fotos do Parque</a></li>
+                            <li><a href="#" class="footer_link">Vídeos</a></li>
+                            <li><a href="#" class="footer_link">Personagens</a></li>
+                        </ul>    
+                    </div>
+                    <div class="first_img">
+                        <div class="width-33">
+                            <img src="./images/footer_icon1.png" alt="">
+                        </div>
+                        <div class="width-33">
+                            <img src="./images/footer_icon2.png" alt="">
+                        </div>
+                        <div class="width-33">
+                            <img src="./images/footer_icon3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="part2_second">
+                    <ul class="second_one">
+                        <li><a href="#">Diversão</a></li>
+                        <li><a href="#" class="footer_link">Baixe nosso App</a></li>
+                        <li><a href="#" class="footer_link">Livros</a></li>
+                        <li><a href="#" class="footer_link">Desenhos p/ Colorir</a></li>
+                        <li><a href="#" class="footer_link">Gibi</a></li>
+                        <li><a href="#">Notícias</a></li>
+                        <li><a href="#" class="footer_link">Blog</a></li>
+                        <li><a href="#" class="footer_link">Últimas Notícias</a></li>
+                        <li><a href="#" class="footer_link">Mini-habitantes</a></li>
+                        <li><a href="#" class="footer_link">Jornal do Mini Mundo</a></li>
+                    </ul>
+                    <ul class="second_two">
+                        <li><a href="#">Curiosidades</a></li>
+                        <li><a href="#" class="footer_link">Você Sabia?</a></li>
+                        <li><a href="#" class="footer_link">Detalhes</a></li>
+                        <li><a href="#" class="footer_link">Depoimentos</a></li>
+                        <li><a href="#" class="footer_link">Eventos</a></li>
+                        <li><a href="#" class="footer_link">Ingressos</a></li>
+                        <li><a href="#" class="footer_link">Onde Estamos</a></li>
+                    </ul>
+                    <ul class="third_two">
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Emails:</a></li>
+                        <li><a href="#"><div class="hide">parque@minimundo.com.br</div></a></li>
+                        <li><a href="#"><div class="hide">minimundo@minimundo.com.br</div></a></li>
+                        <li><a href="#">Fone:</a></li>
+                        <li><a href="#">(54) 3286.4055</a></li>
+                        <li><a href="#">Horário de funcionamento:</a></li>
+                        <li><a href="#">08:30 as 17:30</a></li>
+                        <li><a href="#">Endereço:</a></li>
+                        <li><a href="#">Rua Horácio Cardoso,  291 <br>
+                            CEP 95670-000<br>
+                            Gramado - RS - Brasil</a></li>
+                    </ul>
+                </div>
+                <div class="width-8">
+                    
+                </div>
+            </div>
+            <p class="footer_part3"></p>
+            <div class="footer_part4">
+                <p>Mini Mundo © 2019. Todos os direitos reservados.</p>
+                <div>
+                    <i class="fa fa-facebook-square social_icon" aria-hidden="true"></i>
+                    <i class="fa fa-instagram social_icon" aria-hidden="true"></i>
+                    <i class="fa fa-youtube-play social_icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="mobile_footer">
+            <div class="icon text-center">
+                <p>Baixe o App e sinta-se </p>
+                <p>um Mini-Habitante</p>
+            </div>
+            <div class="width-80 m-auto">
+                <div class="width-100 icon_image text-center"><img src="./images/appstore_icon.png" alt="" class="appstore"></div>
+                <div class="width-100 icon_image text-center mt-20"><img src="./images/googleplay_icon.png" alt="" class="googleplay"></div>
+            </div>
+            <div class="footer_img mt-50 text-center">
+                <p></p>
+                <img src="./images/brand.png" alt="">
+                <p></p>
+            </div>
+            <div class="footer_list">
+                <ul>
+                    <li><a href="">O Parque</a></li>
+                    <li><a href="">História</a></li>
+                    <li><a href="">Linha do Tempo</a></li>
+                    <li><a href="">Quem Somos</a></li>
+                    <li><a href="">Mapa</a></li>
+                    <li><a href="">Lojas</a></li>
+                    <li><a href="">Oficina</a></li>
+                    <li><a href="">Galeria</a></li>
+                    <li><a href="">Fotos do Parque</a></li>
+                    <li><a href="">Vídeos</a></li>
+                    <li><a href="">Personagens</a></li>
+                    <li><a href="">Diversão</a></li>
+                    <li><a href="">Baixe nosso App</a></li>
+                    <li><a href="">Livros</a></li>
+                    <li><a href="">Jornal do Mini Mundo</a></li>
+                    <li><a href="">Desenhos p/ Colorir</a></li>
+                    <li><a href="">Gibi</a></li>
+                    <li><a href="">Curiosidades</a></li>
+                    <li><a href="">Você Sabia?</a></li>
+                    <li><a href="">Detalhes</a></li>
+                    <li><a href="">Depoimentos</a></li>
+                    <li><a href="">Eventos</a></li>
+                    <li><a href="">Ingressos</a></li>
+                    <li><a href="">Onde Estamos</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="">Emails:</a></li>
+                    <li><a href="">parque@minimundo.com.br</a></li>
+                    <li><a href="">minimundo@minimundo.com.br</a></li>
+                    <li><a href="">Fone:</a></li>
+                    <li><a href="">(54) 3286.4055</a></li>
+                    <li><a href="">Horário de funcionamento:</a></li>
+                    <li><a href="">08:30 as 17:30</a></li>
+                    <li><a href="">Endereço:</a></li>
+                    <li>
+                        <a href="">
+                            Rua Horácio Cardoso,  291 <br>
+                            CEP 95670-000<br>
+                            Gramado - RS - Brasil
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="first_img">
+                <div class="width-33">
+                    <img src="./images/footer_icon1.png" alt="">
+                </div>
+                <div class="width-33">
+                    <img src="./images/footer_icon2.png" alt="">
+                </div>
+                <div class="width-33">
+                    <img src="./images/footer_icon3.png" alt="">
+                </div>
+            </div>
+            <div class="footer_icon">
+                <div class="width-20 text-center"></div>
+                <div class="width-20 text-center"><i class="fa fa-facebook-square social_icon" aria-hidden="true"></i></div>
+                <div class="width-20 text-center"><i class="fa fa-instagram social_icon" aria-hidden="true"></i></div>
+                <div class="width-20 text-center"><i class="fa fa-youtube-play social_icon" aria-hidden="true"></i></div>
+                <div class="width-20 text-center"></div>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="footer_content">
+                <div class="text-center">
+                    <p>Mini Mundo &copy; 2019.</p>
+                    <p>Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+        <img src="images/5.png" alt="">
+    </div>
+</div>
+<script>
+    $('.nav').nav();
+</script>
+</body>
+</html>
+<script type="text/javascript">
+    function display(e) {
+        var top_img = document.getElementById('img_jornal_top').src;
+        document.getElementById('img_jornal_top').src = e.src;
+        e.src = top_img;
+        }
+</script>
